@@ -1,18 +1,44 @@
-section {
+main section {
     background-color: #88c1d0;
     width: 20%;
     height: 150px;
 }
 
-body {
+main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li a {
+    margin-right: 20px;
+}
+
+header nav button {
+    display: none;
+}
+
+#menuToggle {
+    display: none; /* hide the checkbox */
+}
+
+#menuToggle:checked ~ nav ul {
+    display: block;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
 @media (min-width: 768px) and (max-width: 1599px) {
-    section {
+    main section {
         background-color: #88c1d0;
         width: 40%;
         height: 200px;
@@ -21,10 +47,16 @@ body {
 }
 
 @media (max-width: 767px) {
-    section {
+    main section {
         background-color: #88c1d0;
         width: 70%;
         height: 300px;
         margin-bottom: 20px;
+    }
+    header nav ul {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
     }
 }

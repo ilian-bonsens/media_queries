@@ -2,6 +2,28 @@ body {
     background-color: #88c1d0;
 }
 
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li a {
+    margin-right: 20px;
+}
+
+header nav button {
+    display: none;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
 @media (min-width: 1680px) and (max-width: 1920px) {
     body {
         background-color: #ffca4b;
@@ -19,4 +41,17 @@ body {
         background-color: #ffffff;
     }
 }
+
+@media (max-width: 767px) {
+    header nav ul {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menuToggle:checked ~ nav ul {
+        display: block;
+    }
+}
+
 

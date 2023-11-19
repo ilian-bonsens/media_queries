@@ -1,3 +1,37 @@
 body {
     background-color: #ffffff;
 }
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li a {
+    margin-right: 20px;
+}
+
+header nav button {
+    display: none;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    header nav ul {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menuToggle:checked ~ nav ul {
+        display: block;
+    }
+}
